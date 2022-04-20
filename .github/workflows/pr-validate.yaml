@@ -3,7 +3,7 @@ name: "Pull Request: Validate"
 on:
   pull_request:
     branches:
-      - master
+      - Aste88
 
 concurrency:
   group: ${{ github.head_ref }}-pr-validate
@@ -11,17 +11,17 @@ concurrency:
 
 jobs:
   pr-metadata:
-    uses: k8s-at-home/charts/.github/workflows/pr-metadata.yaml@master
+    uses: k8s-at-home/charts/.github/workflows/pr-metadata.yaml@Aste88
 
   pre-commit-check:
-    uses: k8s-at-home/charts/.github/workflows/pre-commit-check.yaml@master
+    uses: k8s-at-home/charts/.github/workflows/pre-commit-check.yaml@Aste88
     needs:
       - pr-metadata
     with:
       modifiedFiles: ${{ needs.pr-metadata.outputs.addedOrModifiedFiles }}
 
   charts-changelog:
-    uses: k8s-at-home/charts/.github/workflows/charts-changelog.yaml@master
+    uses: k8s-at-home/charts/.github/workflows/charts-changelog.yaml@Aste88
     needs:
       - pr-metadata
       - pre-commit-check
@@ -30,7 +30,7 @@ jobs:
       modifiedCharts: ${{ needs.pr-metadata.outputs.addedOrModifiedCharts }}
 
   charts-lint:
-    uses: k8s-at-home/charts/.github/workflows/charts-lint.yaml@master
+    uses: k8s-at-home/charts/.github/workflows/charts-lint.yaml@Aste88
     needs:
       - pr-metadata
       - charts-changelog
@@ -39,7 +39,7 @@ jobs:
       chartChangesDetected: ${{ needs.pr-metadata.outputs.addedOrModified }}
 
   charts-test:
-    uses: k8s-at-home/charts/.github/workflows/charts-test.yaml@master
+    uses: k8s-at-home/charts/.github/workflows/charts-test.yaml@Aste88
     needs:
       - pr-metadata
       - charts-changelog
