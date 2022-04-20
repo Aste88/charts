@@ -1,8 +1,8 @@
-# k8s@Home Collection of helm charts
+# k8s@Home Aste88 fork collection of helm charts
 
 ## Installation
 
 ```console
-helm repo add k8s-at-home https://k8s-at-home.com/charts
-helm search k8s-at-home
+helm repo add aste88-k8s-at-home https://aste88.github.io/charts
+helm search aste88-k8s-at-home
 ```
