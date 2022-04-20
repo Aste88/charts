@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "common.names.fullname" . }}-config
+  labels:
+    {{- include "common.labels" . | nindent 4 }}
+data:
+  GITEA__security__INSTALL_LOCK: "true"
+  {{ if .Values.ingress.main.enabled }}
+  GITEA__server__ROOT_URL: https://{{ (first .Values.ingress.main.hosts).host }}/
+  {{ end }}
+  {{ if .Values.postgresql.enabled }}
+  GITEA__database__DB_TYPE: postgres
+  GITEA__database__HOST: gitea-postgresql-hl:5432
+  GITEA__database__NAME: {{ .Values.postgresql.auth.database }}
+  GITEA__database__USER: {{ .Values.postgresql.auth.username  }}
+  {{ end }}
+  {{ if .Values.mariadb.enabled }}
+  GITEA__database__DB_TYPE: mysql  
+  GITEA__database__HOST: gitea-mariadb:3306
+  GITEA__database__NAME: {{ .Values.mariadb.auth.database }}
+  GITEA__database__USER: {{ .Values.mariadb.auth.username  }}
+  {{ end }}
+  {{ if .Values.redis.enabled }}
+  GITEA__cache__ADAPTER: redis
+  GITEA__cache__HOST: network=tcp,addr=gitea-redis-headless:6379,password={{ .Values.redis.auth.password }}
+  {{ end }}
+  {{- range $key, $val := .Values.config }}
+  {{ $key }}: {{ $val | toJson }}
+  {{- end }}
