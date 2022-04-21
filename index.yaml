@@ -2333,6 +2333,41 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/amcrest2mqtt-1.0.0/amcrest2mqtt-1.0.0.tgz
     version: 1.0.0
   anonaddy:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `redis` chart dependency to version `16.8.2`.
+    apiVersion: v2
+    appVersion: 0.8.4
+    created: "2022-04-21T00:12:40.374639166Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.8.2
+    description: 'Anonaddy: Anonymous email forwarding'
+    digest: d45614d86499206541a68c21e6aa57e21bc43c2eb5ef566caeba5db02dcb5604
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/anonaddy
+    icon: https://avatars.githubusercontent.com/u/51450862?s=200&v=4?sanitize=true
+    keywords:
+    - anonaddy
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: simon.caron@pm.me
+      name: simoncaron
+    name: anonaddy
+    sources:
+    - https://github.com/anonaddy/docker
+    urls:
+    - https://github.com/Aste88/charts/releases/download/anonaddy-3.0.0/anonaddy-3.0.0.tgz
+    version: 3.0.0
   - apiVersion: v2
     appVersion: 0.8.4
     created: "2022-01-03T15:14:40.653621768Z"
@@ -3597,7 +3632,106 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/aria2-1.0.0/aria2-1.0.0.tgz
     version: 1.0.0
+  audiobookshelf:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: 1.6.69
+    created: "2022-04-21T00:12:40.999825847Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Self-hosted audiobook server for managing and playing your audiobooks
+    digest: e45bf02c40e576e314a7440c0690a660d404493e92afe4b622f9c37d2ec5cde1
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/audiobookshelf
+    icon: https://github.com/advplyr/audiobookshelf/blob/master/static/Logo.png
+    keywords:
+    - audiobookshelf
+    - books
+    - audiobooks
+    kubeVersion: '>= 1.16.0-0'
+    maintainers:
+    - email: tvories@gmail.com
+      name: tvories
+    name: audiobookshelf
+    sources:
+    - https://github.com/advplyr/audiobookshelf
+    urls:
+    - https://github.com/Aste88/charts/releases/download/audiobookshelf-1.0.0/audiobookshelf-1.0.0.tgz
+    version: 1.0.0
+  babybuddy:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: 1.10.2
+    created: "2022-04-21T00:12:41.153832161Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: A buddy for babies! Helps caregivers track sleep, feedings, diaper
+      changes, tummy time and more to learn about and predict baby's needs without
+      (as much) guess work.
+    digest: 8283f6104a750730b513debb62c49a684ccdc5969e62ddfeadfe2db5b357d569
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/incubator/babybuddy
+    icon: https://github.com/babybuddy/babybyddy/blob/master/babybuddy/static_src/logo/icon.png?raw=true
+    keywords:
+    - babybuddy
+    - baby
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: brianporeilly@gmail.com
+      name: brianporeilly
+    name: babybuddy
+    sources:
+    - https://github.com/babybuddy/babybuddy
+    - https://hub.docker.com/r/linuxserver/babybuddy
+    urls:
+    - https://github.com/Aste88/charts/releases/download/babybuddy-1.0.0/babybuddy-1.0.0.tgz
+    version: 1.0.0
   baikal:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+    apiVersion: v2
+    appVersion: 0.8.0
+    created: "2022-04-21T00:12:41.316802713Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: Baïkal is a lightweight CalDAV+CardDAV server. It offers a web interface
+      with management of users, address books and calendars.
+    digest: d573e6a17af3378b280fad304d6727d76048cc7cd991fc8b09e3c302763b8299
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/baikal
+    icon: https://avatars.githubusercontent.com/u/28524376?s=400&v=4
+    keywords:
+    - baikal
+    - caldav
+    - carddav
+    - contacts
+    - calendar
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: baikal
+    sources:
+    - https://github.com/sabre-io/Baikal
+    - https://github.com/ckulka/baikal-docker
+    urls:
+    - https://github.com/Aste88/charts/releases/download/baikal-4.1.0/baikal-4.1.0.tgz
+    version: 4.1.0
   - apiVersion: v2
     appVersion: 0.8.0
     created: "2022-01-03T15:07:05.643716644Z"
@@ -4160,6 +4294,40 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/baikal-1.0.0/baikal-1.0.0.tgz
     version: 1.0.0
   bazarr:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Updated to use the latest docker image.
+    apiVersion: v2
+    appVersion: v1.0.3
+    created: "2022-04-21T00:12:41.482270019Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Bazarr is a companion application to Sonarr and Radarr. It manages
+      and downloads subtitles based on your requirements
+    digest: 27283ca43e3a760aec4e31fe1652221feb50298cee9bbf9f85cf06eff36172dd
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/bazarr
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/bazarr.png
+    keywords:
+    - bazarr
+    - radarr
+    - sonarr
+    - subtitles
+    - usenet
+    - torrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: bazarr
+    sources:
+    - https://github.com/morpheus65535/bazarr
+    - https://github.com/k8s-at-home/container-images
+    urls:
+    - https://github.com/Aste88/charts/releases/download/bazarr-10.4.0/bazarr-10.4.0.tgz
+    version: 10.4.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -6103,6 +6271,35 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Upgraded `appversion` to version `0.18` and made it use Chart.appversion by default for ease of maintenance.
+    apiVersion: v2
+    appVersion: v0.18
+    created: "2022-04-21T00:12:41.809128706Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: DNS proxy as ad-blocker for local network
+    digest: e866549872473d5a0e5741bb083adab61b197abc7c5506d5504aef6ac6139f15
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/blocky
+    icon: https://github.com/0xERR0R/blocky/raw/master/docs/blocky.svg?sanitize=true
+    keywords:
+    - blocky
+    - adblock
+    - dns
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: blocky
+    sources:
+    - https://github.com/0xERR0R/blocky
+    urls:
+    - https://github.com/Aste88/charts/releases/download/blocky-10.1.1/blocky-10.1.1.tgz
+    version: 10.1.1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
     apiVersion: v2
     appVersion: v0.17
@@ -7795,6 +7992,44 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/booksonic-air-1.0.0/booksonic-air-1.0.0.tgz
     version: 1.0.0
   bookstack:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+    apiVersion: v2
+    appVersion: v21.12
+    created: "2022-04-21T00:12:42.12511369Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: A simple, self-hosted, easy-to-use platform for organising and storing
+      information.
+    digest: 89cbc647feef78c605f21e1391995594971db57a446757580784878529c91b1c
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/bookstack
+    icon: https://avatars3.githubusercontent.com/u/20912696?s=400&v=4?sanitize=true
+    keywords:
+    - bookstack
+    - book
+    - stack
+    - organizer
+    - server
+    - hosted
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: ncwilde43@gmail.com
+      name: nicholaswilde
+    name: bookstack
+    sources:
+    - https://www.bookstackapp.com/
+    - https://hub.docker.com/r/linuxserver/bookstack
+    urls:
+    - https://github.com/Aste88/charts/releases/download/bookstack-4.1.0/bookstack-4.1.0.tgz
+    version: 4.1.0
   - apiVersion: v2
     appVersion: v21.12
     created: "2022-01-03T14:57:02.545048053Z"
@@ -13517,6 +13752,92 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Update to Dendrite 0.8.1
+        - kind: added
+          description: Added healthchecks
+        - kind: removed
+          description: Removed unused database from config & initdb script
+        - kind: removed
+          description: Removed EDU Server
+    apiVersion: v2
+    appVersion: v0.8.1
+    created: "2022-04-21T00:12:43.629944368Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.15
+    - condition: nats.enabled
+      name: nats
+      repository: https://nats-io.github.io/k8s/helm/charts/
+      version: 0.15.1
+    - alias: clientapi
+      condition: dendrite.polylithEnabled
+      name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - alias: mediaapi
+      condition: dendrite.polylithEnabled
+      name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - alias: syncapi
+      condition: dendrite.polylithEnabled
+      name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - alias: roomserver
+      condition: dendrite.polylithEnabled
+      name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - alias: federationapi
+      condition: dendrite.polylithEnabled
+      name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - alias: keyserver
+      condition: dendrite.polylithEnabled
+      name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - alias: userapi
+      condition: dendrite.polylithEnabled
+      name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - alias: appserviceapi
+      condition: dendrite.polylithEnabled
+      name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Dendrite Matrix Homeserver
+    digest: 01cee214172a89712e0a71dae0bebc3745c96695ab426cf565992504a1fe8bdf
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/dendrite
+    keywords:
+    - dendrite
+    - matrix
+    - homeserver
+    - monolith
+    - federation
+    - polylith
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jonathan@jonnobrow.co.uk
+      name: jonnobrow
+    name: dendrite
+    sources:
+    - https://github.com/matrix-org/dendrite
+    - https://github.com/matrix-org/dendrite/tree/master/build/docker
+    urls:
+    - https://github.com/Aste88/charts/releases/download/dendrite-4.1.0/dendrite-4.1.0.tgz
+    version: 4.1.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Bumped app version to v0.6.3
     apiVersion: v2
     appVersion: v0.6.3
@@ -14447,6 +14768,39 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/dizquetv-1.0.0/dizquetv-1.0.0.tgz
     version: 1.0.0
   dnsmadeeasy-webhook:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `cert-manager` chart dependency to version `v1.7.2`.
+    apiVersion: v2
+    appVersion: 1.2.0
+    created: "2022-04-21T00:12:43.942262018Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: v1.7.2
+    description: Cert-Manager Webhook for DNSMadeEasy
+    digest: babb8b6f81d8b153b556ab9b99ec591a5727b112377be0289131bdbe1a5404dd
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/dnsmadeeasy-webhook
+    icon: https://pbs.twimg.com/profile_images/1759911243/dnsmeavatar_400x400.png
+    keywords:
+    - cert-manager
+    - dnsmadeeasy
+    - letsencrypt
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: dnsmadeeasy-webhook
+    sources:
+    - https://github.com/k8s-at-home/dnsmadeeasy-webhook
+    - https://cert-manager.io
+    urls:
+    - https://github.com/Aste88/charts/releases/download/dnsmadeeasy-webhook-4.5.0/dnsmadeeasy-webhook-4.5.0.tgz
+    version: 4.5.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -15481,6 +15835,40 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/double-take-1.0.0/double-take-1.0.0.tgz
     version: 1.0.0
   dsmr-reader:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `11.1.12`.
+    apiVersion: v2
+    appVersion: 2021.06.01
+    created: "2022-04-21T00:12:44.410647145Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.12
+    description: DSMR-protocol reader, telegram data storage and energy consumption
+      visualizer.
+    digest: 08d8a443a668e7dc077324522320afbf5abe11c3dda181d1f61c0f1a768a3ecd
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/dsmr-reader
+    icon: https://avatars2.githubusercontent.com/u/57727360?s=400&v=4
+    keywords:
+    - dsmr-reader
+    - energy
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: dsmr-reader
+    sources:
+    - https://github.com/dsmrreader/dsmr-reader
+    - https://github.com/xirixiz/dsmr-reader-docker
+    urls:
+    - https://github.com/Aste88/charts/releases/download/dsmr-reader-6.0.0/dsmr-reader-6.0.0.tgz
+    version: 6.0.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -18133,6 +18521,35 @@ entries:
     - https://hub.docker.com/r/machinebox/facebox
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/facebox-1.0.0/facebox-1.0.0.tgz
+    version: 1.0.0
+  factorio:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: stable
+    created: "2022-04-21T00:12:45.307745417Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Factorio dedicated steam game server
+    digest: 8b14ffe9d1e5634857727034a4fc8143d5815ac2ffa7158b3268c96016e9cf8d
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/factorio
+    icon: https://factorio.com/static/img/factorio-wheel.png
+    keywords:
+    - factorio
+    - steam
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: nat@natallan.com
+      name: Truxnell
+    name: factorio
+    sources:
+    - https://github.com/factoriotools/factorio-docker
+    urls:
+    - https://github.com/Aste88/charts/releases/download/factorio-1.0.0/factorio-1.0.0.tgz
     version: 1.0.0
   filebrowser:
   - annotations:
@@ -21220,6 +21637,47 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: |
+            **Breaking:** Updated image tag to version `0.10.0-amd64`. See the application release notes for the breaking changes.
+          links:
+            - name: Application release notes
+              url: https://github.com/blakeblackshear/frigate/releases/tag/v0.10.0
+        - kind: changed
+          description: |
+            **Breaking:** Use the common library built-in configMap for configuration.
+    apiVersion: v2
+    appVersion: 0.10.0-amd64
+    created: "2022-04-21T00:12:46.382331878Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: NVR With Realtime Object Detection for IP Cameras
+    digest: fc69a20533b1d32aee09250922773d9cfc3ae2338d7bbaa139d5d5265209acf7
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/frigate
+    icon: https://github.com/blakeblackshear/frigate/blob/master/docs/static/img/frigate.png
+    keywords:
+    - frigate
+    - nvr
+    - tensorflow
+    - coral
+    - ml
+    - machine-learning
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    - email: 5434875+PixelJonas@users.noreply.github.com
+      name: PixelJonas
+    name: frigate
+    sources:
+    - https://github.com/blakeblackshear/frigate
+    urls:
+    - https://github.com/Aste88/charts/releases/download/frigate-8.0.0/frigate-8.0.0.tgz
+    version: 8.0.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
     apiVersion: v2
     appVersion: v0.9.4
@@ -22556,6 +23014,39 @@ entries:
   ghost:
   - annotations:
       artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+    apiVersion: v2
+    appVersion: 4.37.0
+    created: "2022-04-21T00:12:46.839682304Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: Ghost is a blogging and publishing software
+    digest: 87856bbd00190628553e3535c7f4844e6d0a4cafb7002d11a9f76296fbd60e2d
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/ghost
+    icon: https://ghost.org/images/logos/logo-black-1.png
+    keywords:
+    - ghost
+    - blogging
+    kubeVersion: '>=1.19.0-0'
+    maintainers:
+    - email: sm+k8s-at-home+git@samip.fi
+      name: samip5
+    name: ghost
+    sources:
+    - https://github.com/TryGhost/Ghost
+    - https://github.com/TryGhost/Ghost-CLI
+    urls:
+    - https://github.com/Aste88/charts/releases/download/ghost-1.3.0/ghost-1.3.0.tgz
+    version: 1.3.0
+  - annotations:
+      artifacthub.io/changes: |
         - kind: fixed
           description: Fixed database host to match mariadb-svc
     apiVersion: v2
@@ -22687,6 +23178,46 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/ghost-1.0.0/ghost-1.0.0.tgz
     version: 1.0.0
+  gitea:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: 1.16.5
+    created: "2022-04-21T00:12:47.023736175Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.22
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.5.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.8.7
+    description: gitea helm package
+    digest: 6093463197219660f0170a001dd5e3af6cce69a2fb063cca21bb9b5eebfafef2
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/gitea
+    icon: https://docs.gitea.io/images/gitea.png
+    keywords:
+    - gitea
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: admin@aste.tools
+      name: Aste88
+    name: gitea
+    sources:
+    - https://github.com/go-gitea/gitea
+    urls:
+    - https://github.com/Aste88/charts/releases/download/gitea-1.0.1/gitea-1.0.1.tgz
+    version: 1.0.1
   gollum:
   - annotations:
       artifacthub.io/changes: |
@@ -23518,6 +24049,33 @@ entries:
     - https://hub.docker.com/r/sentriz/gonic
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/gonic-1.0.0/gonic-1.0.0.tgz
+    version: 1.0.0
+  gotify:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: 2.1.4
+    created: "2022-04-21T00:12:47.486870797Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: A simple server for sending and receiving messages
+    digest: 7c5dd7aba48e63217741105e06e37478779075e051c52452fd375cda2b1f826e
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/gotify/
+    icon: https://avatars.githubusercontent.com/u/36410427?s=200&v=4
+    keywords:
+    - gotify
+    maintainers:
+    - email: barregargamel@gmail.com
+      name: jonas
+    name: gotify
+    sources:
+    - https://github.com/gotify/server
+    urls:
+    - https://github.com/Aste88/charts/releases/download/gotify-1.0.0/gotify-1.0.0.tgz
     version: 1.0.0
   grocy:
   - annotations:
@@ -25856,6 +26414,49 @@ entries:
     - https://github.com/billimek/billimek-charts/releases/download/heimdall-1.0.1/heimdall-1.0.1.tgz
     version: 1.0.1
   home-assistant:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: "Upgraded values.yaml to fix issue for postgresql pvc creation"
+    apiVersion: v2
+    appVersion: 2022.4.0
+    created: "2022-04-21T00:12:48.2772024Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.13
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 4.0.8
+    description: Home Assistant
+    digest: c696b50d8a095d7fba608106a5ed9d438a41615fc4c46479bbb173fa2ca46f61
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/k8s-at-home/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/Aste88/charts/releases/download/home-assistant-13.0.2/home-assistant-13.0.2.tgz
+    version: 13.0.2
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -29149,6 +29750,35 @@ entries:
   homebridge:
   - annotations:
       artifacthub.io/changes: |
+        - kind: fixed
+          description: Set permissions for startup.sh to be executable
+    apiVersion: v2
+    appVersion: 4.0.0
+    created: "2022-04-21T00:12:48.428170069Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: A lightweight NodeJS server that emulates the iOS HomeKit API
+    digest: a4893562980b58f383fe06285b7a13da032efa784e9d6baa982e5345505d435e
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/homebridge
+    icon: https://avatars0.githubusercontent.com/u/38217527?s=400&v=4?sanitize=true
+    keywords:
+    - homebridge
+    - homekit
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: bjw-s@users.noreply.github.com
+      name: bjw-s
+    name: homebridge
+    sources:
+    - https://homebridge.io/
+    - https://github.com/oznu/docker-homebridge
+    urls:
+    - https://github.com/Aste88/charts/releases/download/homebridge-4.3.1/homebridge-4.3.1.tgz
+    version: 4.3.1
+  - annotations:
+      artifacthub.io/changes: |
         - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
     apiVersion: v2
@@ -31337,6 +31967,40 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+    apiVersion: v2
+    appVersion: latest
+    created: "2022-04-21T00:12:49.030646836Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: A monitoring system which checks the availability of your network
+      resources, notifies users of outages, and generates performance data for reporting.
+    digest: 027ee77f8390cef177f9ef0a82f3e71ab535d5609c5e88250384569fb2416716
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/icinga2
+    icon: https://avatars.githubusercontent.com/u/835441?s=200&v=4
+    keywords:
+    - icinga2
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: ncwilde43@gmail.com
+      name: nicholaswilde
+    name: icinga2
+    sources:
+    - https://github.com/jjethwa/icinga2
+    - https://icinga.com/
+    urls:
+    - https://github.com/Aste88/charts/releases/download/icinga2-3.1.0/icinga2-3.1.0.tgz
+    version: 3.1.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
         - kind: changed
           description: Upgraded `mariadb` chart dependency to version `10.2.0`.
@@ -31640,6 +32304,35 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/icinga2-1.0.0/icinga2-1.0.0.tgz
     version: 1.0.0
+  influxdb-exporter:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: fixed
+          description: Update image to 0.9.0 (InfluxDB v2 clients support), use differnt port for UDP.
+    apiVersion: v2
+    appVersion: v0.9.0
+    created: "2022-04-21T00:12:49.181835323Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: An exporter for metrics in the InfluxDB format, transforms them and
+      exposes them for consumption by Prometheus.
+    digest: a71d769c841842a59d39c5377294a4b7b75a4eb7b474b811a3d50f2e7416b284
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/incubator/influxdb-exporter
+    icon: https://influxdata.github.io/branding/img/downloads/influxdata-logo--symbol--pool.jpg
+    keywords:
+    - influxdb-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: admin@aste.tools
+      name: Aste88
+    name: influxdb-exporter
+    sources:
+    - https://github.com/prometheus/influxdb_exporter
+    urls:
+    - https://github.com/Aste88/charts/releases/download/influxdb-exporter-1.0.2/influxdb-exporter-1.0.2.tgz
+    version: 1.0.2
   intel-gpu-plugin:
   - annotations:
       artifacthub.io/changes: |
@@ -32056,6 +32749,35 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/intel-gpu-plugin-1.0.0/intel-gpu-plugin-1.0.0.tgz
     version: 1.0.0
   jackett:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Updated the docker image to the latest version v0.20.892.
+    apiVersion: v2
+    appVersion: v0.20.892
+    created: "2022-04-21T00:12:49.486594954Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: API Support for your favorite torrent trackers
+    digest: 1a7ca81645ea316b3344b7410ee44f36adc55efb60500d304c14c777679eec0b
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-banner.png
+    keywords:
+    - jackett
+    - torrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/k8s-at-home/container-images
+    urls:
+    - https://github.com/Aste88/charts/releases/download/jackett-11.4.0/jackett-11.4.0.tgz
+    version: 11.4.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -35085,6 +35807,39 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `11.1.15`.
+    apiVersion: v2
+    appVersion: 2.1.2
+    created: "2022-04-21T00:12:49.962575711Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.15
+    description: This server allows you to sync any Joplin client
+    digest: 477214af1ed3b22bce2ce4a8bd39078b126d7ccfa0331ce505fd7a8e71e655d5
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/jopplin-server
+    icon: https://raw.githubusercontent.com/laurent22/joplin/master/Assets/LinuxIcons/256x256.png?raw=true
+    keywords:
+    - joplin
+    - notes
+    maintainers:
+    - email: k8s-at-home@xpander.eml.cc
+      name: auricom
+    name: joplin-server
+    sources:
+    - https://github.com/laurent22/joplin/tree/dev/packages/server
+    - https://github.com/laurent22/joplin
+    - https://hub.docker.com/r/joplin/server
+    urls:
+    - https://github.com/Aste88/charts/releases/download/joplin-server-5.0.0/joplin-server-5.0.0.tgz
+    version: 5.0.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
     apiVersion: v2
     appVersion: 2.1.2
@@ -35721,7 +36476,60 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/joplin-server-1.0.1/joplin-server-1.0.1.tgz
     version: 1.0.1
+  kah-common-chart:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    created: "2022-04-21T00:12:50.117989922Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: A KaH-common powered chart template. This can be useful for small
+      projects that don't have their own chart.
+    digest: 89ee49602167440890458721231bae96868e399908c4a933d610d4d7c6a6e798
+    maintainers:
+    - email: me@bjw-s.dev
+      name: bjw-s
+    name: kah-common-chart
+    urls:
+    - https://github.com/Aste88/charts/releases/download/kah-common-chart-1.0.0/kah-common-chart-1.0.0.tgz
+    version: 1.0.0
   kanboard:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: v1.2.20
+    created: "2022-04-21T00:12:50.270440886Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    description: Kanboard is a free and open source Kanban project management software.
+    digest: 9d7750ae9d09130a4508e96daa94b6647a60cf0b4fe01ff670c3746d53d3da09
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/kanboard
+    icon: https://raw.githubusercontent.com/kanboard/website/master/assets/img/icon.svg
+    keywords:
+    - kanboard
+    - kanban
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: trly@users.noreply.github.com
+      name: trly
+    name: kanboard
+    sources:
+    - https://github.com/kanboard/kanboard
+    urls:
+    - https://github.com/Aste88/charts/releases/download/kanboard-4.6.0/kanboard-4.6.0.tgz
+    version: 4.6.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -36593,7 +37401,64 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/komga-1.0.0/komga-1.0.0.tgz
     version: 1.0.0
+  kube-ops-view:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: 20.4.0
+    created: "2022-04-21T00:12:50.57780867Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: kube-ops-view helm package
+    digest: 3901adc9f1ff92f1320ce976939b205d59e8ac829260e722f69494a8389ce8d6
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/kube-ops-view
+    icon: https://codeberg.org/repo-avatars/677-c51f6426305941cab515fdd98368f0bb
+    keywords:
+    - kube-ops-view
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: dennis.zhang.nrg@gmail.com
+      name: FlipEnergy
+    name: kube-ops-view
+    sources:
+    - https://codeberg.org/hjacobs/kube-ops-view
+    urls:
+    - https://github.com/Aste88/charts/releases/download/kube-ops-view-1.0.0/kube-ops-view-1.0.0.tgz
+    version: 1.0.0
   lancache:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Added probes for LanCache DNS container.
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-04-21T00:12:50.730260333Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: LanCache Monolithic - a caching proxy server for game download content
+    digest: bb065404269281f1bd93cebe020195eacd657ed55831c9e985872305035d2e83
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/lancache
+    icon: https://avatars.githubusercontent.com/u/16938914
+    keywords:
+    - lancache
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: me@reitermark.us
+      name: reitermarkus
+    name: lancache
+    sources:
+    - https://github.com/lancachenet/monolithic
+    - https://hub.docker.com/r/lancachenet/monolithic
+    - https://hub.docker.com/r/lancachenet/lancache-dns
+    urls:
+    - https://github.com/Aste88/charts/releases/download/lancache-0.4.0/lancache-0.4.0.tgz
+    version: 0.4.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -37829,6 +38694,36 @@ entries:
     - https://github.com/billimek/billimek-charts/releases/download/librespeed-1.0.0/librespeed-1.0.0.tgz
     version: 1.0.0
   lidarr:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Inherit persistence.config.subPath in metrics exporter
+    apiVersion: v2
+    appVersion: v1.0.0.2255
+    created: "2022-04-21T00:12:51.348315641Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Looks and smells like Sonarr but made for music
+    digest: 11fb6ba491a1740725792e2cbc793385194d6cc6e4011b712d8c7e85a8d25f1a
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/lidarr
+    icon: https://github.com/lidarr/Lidarr/blob/develop/Logo/512.png?raw=true
+    keywords:
+    - lidarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: lidarr
+    sources:
+    - https://github.com/Lidarr/Lidarr
+    - https://github.com/k8s-at-home/container-images
+    urls:
+    - https://github.com/Aste88/charts/releases/download/lidarr-14.0.1/lidarr-14.0.1.tgz
+    version: 14.0.1
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -40166,6 +41061,37 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: v0.5.2
+    created: "2022-04-21T00:12:51.786813471Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    description: Maddy Mail Server
+    digest: c9986f831ec79ffea2b3eb811b21fc904dabdfd4566c3aa8fc04c2e90e19f7c5
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/maddy
+    keywords:
+    - maddy
+    - mail
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: maddy
+    sources:
+    - https://github.com/foxcpp/maddy
+    urls:
+    - https://github.com/Aste88/charts/releases/download/maddy-2.1.0/maddy-2.1.0.tgz
+    version: 2.1.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: **Breaking**: `alias` content moved from `maddy.alias` to `maddy.config_files.alias`
         - kid: added
           description: additional settings for imap and local_mailboxes under `extra_settings`.
@@ -40555,6 +41481,39 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/magic-mirror-1.0.0/magic-mirror-1.0.0.tgz
     version: 1.0.0
   mealie:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: v0.5.6
+    created: "2022-04-21T00:12:52.09333777Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    description: Mealie is a self hosted recipe manager and meal planner with a RestAPI
+      backend and a reactive frontend application built in Vue for a pleasant user
+      experience for the whole family.
+    digest: f6febd94ea9accd837c08dead3999c92a10c8eea4db1f7fe87cdda4ad9077d84
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/mealie
+    icon: https://raw.githubusercontent.com/hay-kot/mealie/gh-pages/assets/img/favicon.png
+    keywords:
+    - grocy
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: me@bjw-s.dev
+      name: bjw-s
+    name: mealie
+    sources:
+    - https://github.com/hay-kot/mealie
+    urls:
+    - https://github.com/Aste88/charts/releases/download/mealie-4.1.0/mealie-4.1.0.tgz
+    version: 4.1.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -41067,6 +42026,39 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/media-common-openvpn-1.0.0/media-common-openvpn-1.0.0.tgz
     version: 1.0.0
   miniflux:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded miniflux to version 2.0.36.
+    apiVersion: v2
+    appVersion: 2.0.36
+    created: "2022-04-21T00:12:52.255999251Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    description: Miniflux is a minimalist and opinionated feed reader.
+    digest: e532be3c9c75d050bdc3d52799ac39aee25cbc1c445dac58868766675ce7c211
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/miniflux
+    icon: https://raw.githubusercontent.com/miniflux/logo/master/icon.svg
+    keywords:
+    - miniflux
+    - rss
+    - news
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: trly@users.noreply.github.com
+      name: trly
+    name: miniflux
+    sources:
+    - https://github.com/miniflux/v2
+    urls:
+    - https://github.com/Aste88/charts/releases/download/miniflux-4.6.1/miniflux-4.6.1.tgz
+    version: 4.6.1
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -42175,6 +43167,39 @@ entries:
     - https://github.com/billimek/billimek-charts/releases/download/modem-stats-2.0.0/modem-stats-2.0.0.tgz
     version: 2.0.0
   monica:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+    apiVersion: v2
+    appVersion: 3.7.0-apache
+    created: "2022-04-21T00:12:52.768592751Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: A Personal Relationship Management tool to help you organize your
+      social life
+    digest: b06ba47bee8c6f7feb20f3c26eb75060c6060f9705c0aca85aab61cc13568210
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/monica
+    icon: https://pbs.twimg.com/profile_images/951820722191720450/mtCNuIXX.jpg
+    keywords:
+    - crm
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: monica
+    sources:
+    - https://github.com/monicahq/monica
+    - https://hub.docker.com/_/monica
+    urls:
+    - https://github.com/Aste88/charts/releases/download/monica-7.1.0/monica-7.1.0.tgz
+    version: 7.1.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -46579,6 +47604,37 @@ entries:
     - https://github.com/networkupstools/nut
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/network-ups-tools-1.0.0/network-ups-tools-1.0.0.tgz
+    version: 1.0.0
+  nginx-php:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: 2.4.0
+    created: "2022-04-21T00:12:54.222362261Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Nginx and PHP FPM for running PHP applications
+    digest: 8e732497ac4c405993ae01b0eb4776e09a8df34580fcafb8aa078208614f1f73
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/nginx-php
+    icon: https://www.nginx.com/wp-content/uploads/2020/05/NGINX-product-icon.svg
+    keywords:
+    - nginx-php
+    - nginx
+    - php
+    - php-fpm
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: nat@natallan.com
+      name: Truxnell
+    name: nginx-php
+    sources:
+    - https://github.com/TrafeX/docker-php-nginx
+    urls:
+    - https://github.com/Aste88/charts/releases/download/nginx-php-1.0.0/nginx-php-1.0.0.tgz
     version: 1.0.0
   node-feature-discovery:
   - apiVersion: v2
@@ -53498,6 +54554,42 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+    apiVersion: v2
+    appVersion: 6.1.0
+    created: "2022-04-21T00:12:55.653678373Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: OpenEMR is the most popular open source electronic health records
+      and medical practice management solution.
+    digest: 0ff27d3defb36771931adc9b5b5c2d6f27dc5128ca8921cd865599e5b364fc52
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/openemr
+    icon: https://avatars.githubusercontent.com/u/283089?s=200&v=4
+    keywords:
+    - openemr
+    - health
+    - medical
+    - healthcare
+    - emr
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: ncwilde43@gmail.com
+      name: nicholaswilde
+    name: openemr
+    sources:
+    - https://github.com/openemr/openemr
+    urls:
+    - https://github.com/Aste88/charts/releases/download/openemr-4.1.0/openemr-4.1.0.tgz
+    version: 4.1.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
         - kind: changed
           description: Upgraded `mariadb` chart dependency to version `10.2.0`.
@@ -54079,6 +55171,47 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/openhab-1.0.0/openhab-1.0.0.tgz
     version: 1.0.0
   openkm:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-04-21T00:12:56.01378481Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: OpenKM integrates all essential documents management, collaboration
+      and an advanced search functionality into one easy to use solution.
+    digest: ec5373129f4c775f2ce69e81e3c2afd3f8554d8fc38cb85dedf3b50424c7eefb
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/openkm
+    icon: https://raw.githubusercontent.com/openkm/document-management-system/master/src/main/webapp/img/logo_favicon.ico
+    keywords:
+    - openkm
+    - documentation management
+    - docs
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: ryan@ryanholt.net
+      name: carpenike
+    name: openkm
+    sources:
+    - https://www.openkm.com/
+    - https://github.com/openkm/document-management-system
+    urls:
+    - https://github.com/Aste88/charts/releases/download/openkm-3.1.0/openkm-3.1.0.tgz
+    version: 3.1.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -55453,7 +56586,73 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/organizr-1.0.0/organizr-1.0.0.tgz
     version: 1.0.0
+  otel-collector:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: 0.46.0
+    created: "2022-04-21T00:12:56.31577409Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: OpenTelemetry collector helm package
+    digest: cce28d63a957561bf321bf4ef096275a1a29e6c4887863c438335cfb3ccd1e2d
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/otel-collector
+    icon: https://otel-collector.org/icon
+    keywords:
+    - otel-collector, open telemetry, tracing
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mike@terhar.com
+      name: mterhar
+    name: otel-collector
+    sources:
+    - https://github.com/otel-collector/otel-collector-docker
+    urls:
+    - https://github.com/Aste88/charts/releases/download/otel-collector-1.0.0/otel-collector-1.0.0.tgz
+    version: 1.0.0
   overleaf:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mongodb` chart dependency to version `10.31.5`.
+        - kind: changed
+          description: Upgraded `redis` chart dependency to version `15.7.6`.
+    apiVersion: v2
+    appVersion: 2.7.1
+    created: "2022-04-21T00:12:56.495951456Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.7.6
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.31.5
+    description: A web-based collaborative LaTeX editor
+    digest: 8e779ea013c432dd625e1d125155386cabe88105884dc9bae4f29cdddc2c28f0
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/overleaf
+    icon: https://avatars.githubusercontent.com/u/6359919?s=200&v=4
+    keywords:
+    - overleaf
+    - sharelatex
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: me@bjw-s.dev
+      name: bjw-s
+    name: overleaf
+    sources:
+    - https://github.com/overleaf/overleaf
+    urls:
+    - https://github.com/Aste88/charts/releases/download/overleaf-2.4.0/overleaf-2.4.0.tgz
+    version: 2.4.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -56778,6 +57977,44 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Added admin username and password env variables to values.yaml
+    apiVersion: v2
+    appVersion: 1.6.0
+    created: "2022-04-21T00:12:57.119568876Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.7.6
+    description: Paperless - Index and archive all of your scanned paper documents
+    digest: 51318458b063391cf10af915174fd5ef98eb27bba490f1acfa9af15b9d438111
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/paperless
+    icon: https://avatars.githubusercontent.com/u/47271576?s=200&v=4
+    keywords:
+    - paperless
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - name: mr-onion-2
+    - email: jonathan@jonnobrow.co.uk
+      name: jonnobrow
+    - email: charts@mor.re
+      name: morremeyer
+    name: paperless
+    sources:
+    - https://github.com/paperless-ngx/paperless-ngx
+    urls:
+    - https://github.com/Aste88/charts/releases/download/paperless-8.6.1/paperless-8.6.1.tgz
+    version: 8.6.1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
         - kind: changed
           description: Upgraded `postgresql` chart dependency to version `10.14.4`.
@@ -57533,6 +58770,42 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/paperless-1.0.0/paperless-1.0.0.tgz
     version: 1.0.0
   photoprism:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+    apiVersion: v2
+    appVersion: "20220121"
+    created: "2022-04-21T00:12:57.282118262Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: PhotoPrism® is a server-based application for browsing, organizing
+      and sharing your personal photo collection
+    digest: d63d7de4570d73d41ead34ae9cf7eea798873b03dbfa30e03e2744fa5252ed8f
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/photoprism
+    icon: https://demo.photoprism.org/static/img/logo-avatar.svg
+    keywords:
+    - photos
+    - photoprism
+    - pictures
+    - sharing
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: photoprism
+    sources:
+    - https://github.com/photoprism/photoprism
+    - https://hub.docker.com/r/photoprism/photoprism
+    urls:
+    - https://github.com/Aste88/charts/releases/download/photoprism-6.5.0/photoprism-6.5.0.tgz
+    version: 6.5.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -59196,6 +60469,35 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Update image to v1.25.9.5721-965587f64.
+    apiVersion: v2
+    appVersion: v1.25.9.5721-965587f64
+    created: "2022-04-21T00:12:57.604019592Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Plex Media Server
+    digest: 81f9a426efde8b250c5e705166c5685232c5d21058f7159f8308136016505f2d
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/plex
+    icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
+    keywords:
+    - plex
+    - plex-media-server
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: plex
+    sources:
+    - https://github.com/k8s-at-home/charts/tree/master/charts/stable/plex
+    - https://github.com/k8s-at-home/container-images/
+    urls:
+    - https://github.com/Aste88/charts/releases/download/plex-6.2.1/plex-6.2.1.tgz
+    version: 6.2.1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
     apiVersion: v2
     appVersion: v1.24.1.4931-1a38e63c6
@@ -60708,6 +62010,35 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Added option to override mutated pod's DNSPolicy.
+    apiVersion: v2
+    appVersion: 1.2.6
+    created: "2022-04-21T00:12:57.759873699Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Admision controller to change the default gateway and DNS server
+      of PODs
+    digest: 4944498e782ce2c0dc266e1686ed004fd6680ad1ce9c344b149cdb81fa8d7d52
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/pod-gateway
+    icon: https://pod-gateway.org/icon
+    keywords:
+    - pod-gateway
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: pod-gateway
+    sources:
+    - https://github.com/k8s-at-home/gateway-admision-controller
+    - https://github.com/k8s-at-home/pod-gateway
+    urls:
+    - https://github.com/Aste88/charts/releases/download/pod-gateway-5.2.1/pod-gateway-5.2.1.tgz
+    version: 5.2.1
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
     apiVersion: v2
     appVersion: 1.2.6
@@ -61207,6 +62538,41 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/pod-gateway-setter-1.0.0/pod-gateway-setter-1.0.0.tgz
     version: 1.0.0
   powerdns:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: v4.3.1
+    created: "2022-04-21T00:12:57.934592467Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: PowerDNS is a DNS server, written in C++ and licensed under the GPL.
+      It runs on most Unix derivatives. PowerDNS features a large number of different
+      backends ranging from simple BIND style zonefiles to relational databases and
+      load balancing/failover algorithms. A DNS recursor is provided as a separate
+      program.
+    digest: 90fc3e8efc75f7a24f2e7a171acd6e3f78d13a2726bdbde8fa5062ee5a9d4ffa
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/powerdns
+    icon: https://avatars.githubusercontent.com/u/1282630?s=200&v=4
+    maintainers:
+    - email: ryan@ryanholt.net
+      name: carpenike
+    name: powerdns
+    sources:
+    - http://www.github.com/PowerDNS/
+    urls:
+    - https://github.com/Aste88/charts/releases/download/powerdns-4.1.0/powerdns-4.1.0.tgz
+    version: 4.1.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -62526,6 +63892,40 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/pretend-youre-xyzzy-1.0.0/pretend-youre-xyzzy-1.0.0.tgz
     version: 1.0.0
   privatebin:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: 1.3.5
+    created: "2022-04-21T00:12:58.427063539Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    description: A minimalist, open source online pastebin running on an Nginx, php-fpm
+      & Alpine Linux stack
+    digest: 75c8075f15b7d605f51d0cb06b8d99acc017cdeabc91d39b7a7953c78d3bd72d
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/incubator/privatebin
+    icon: https://privatebin.info/theme/img/icon.svg
+    keywords:
+    - privatebin
+    - pastebin
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: psych0d0g@users.noreply.github.com
+      name: psych0d0g
+    name: privatebin
+    sources:
+    - https://github.com/PrivateBin/PrivateBin
+    - https://github.com/PrivateBin/docker-nginx-fpm-alpine
+    urls:
+    - https://github.com/Aste88/charts/releases/download/privatebin-1.1.0/privatebin-1.1.0.tgz
+    version: 1.1.0
   - annotations:
       artifacthub.io/changes: |
         - kind: added
@@ -63848,6 +65248,37 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/protonmail-bridge-1.0.0/protonmail-bridge-1.0.0.tgz
     version: 1.0.0
   prowlarr:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Uplifted the docker image to use the latest version v0.3.0.1710
+    apiVersion: v2
+    appVersion: v0.3.0.1710
+    created: "2022-04-21T00:12:59.072261874Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Indexer manager/proxy built on the popular arr net base stack to
+      integrate with your various PVR apps.
+    digest: 3822b8af7a46ddd2a716e21c67c5f7e62d7519f79c94ab833f59b91aec6bf18c
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/prowlarr
+    icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/400.png
+    keywords:
+    - prowlarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: prowlarr
+    sources:
+    - https://github.com/Prowlarr/Prowlarr
+    - https://github.com/k8s-at-home/container-images
+    urls:
+    - https://github.com/Aste88/charts/releases/download/prowlarr-4.3.0/prowlarr-4.3.0.tgz
+    version: 4.3.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -65178,6 +66609,35 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Updated docker image to be the latest one.
+    apiVersion: v2
+    appVersion: v4.4.2
+    created: "2022-04-21T00:12:59.526536631Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: qBittorrent is a cross-platform free and open-source BitTorrent client
+    digest: dfccb980f8156b810e910fc20db7bc0f357fe6c47c30619c9888312a721ac2a0
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/qbittorrent
+    icon: https://cloud.githubusercontent.com/assets/14862437/23586868/89ef2922-01c4-11e7-869c-52aafcece17f.png
+    keywords:
+    - qbittorrent
+    - torrrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: qbittorrent
+    sources:
+    - https://github.com/qbittorrent/qBittorrent
+    - https://github.com/k8s-at-home/container-images
+    urls:
+    - https://github.com/Aste88/charts/releases/download/qbittorrent-13.3.0/qbittorrent-13.3.0.tgz
+    version: 13.3.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
     apiVersion: v2
     appVersion: v4.3.7
@@ -66406,6 +67866,36 @@ entries:
     - https://github.com/billimek/billimek-charts/releases/download/qbittorrent-2.0.1/qbittorrent-2.0.1.tgz
     version: 2.0.1
   radarr:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Updated docker image to version v4.1.0.6175
+    apiVersion: v2
+    appVersion: v4.1.0.6175
+    created: "2022-04-21T00:12:59.685244586Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: A fork of Sonarr to work with movies à la Couchpotato
+    digest: b2fdba59a71220e4e29a07b65d85a4bd705f811965cc5da2678154f20367f7ce
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/radarr
+    icon: https://github.com/Radarr/Radarr/blob/aphrodite/Logo/512.png?raw=true
+    keywords:
+    - radarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/k8s-at-home/container-images
+    urls:
+    - https://github.com/Aste88/charts/releases/download/radarr-16.1.0/radarr-16.1.0.tgz
+    version: 16.1.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -68814,6 +70304,37 @@ entries:
   recipes:
   - annotations:
       artifacthub.io/changes: |
+        - kind: added
+          description: Support for reverse proxy authentication.
+    apiVersion: v2
+    appVersion: 1.0.5.2
+    created: "2022-04-21T00:13:00.156681035Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Recipes is a Django application to manage, tag and search recipes
+      using either built in models or external storage providers hosting PDF's, Images
+      or other files.
+    digest: 4885285939a1ece91e41c5e92b21e556c157c03355d34a5c6ca82e109669ce3b
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/recipes
+    icon: https://raw.githubusercontent.com/vabene1111/recipes/develop/docs/logo_color.svg
+    keywords:
+    - recipes
+    - cooking
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: k8s-at-home@xpander.eml.cc
+      name: auricom
+    name: recipes
+    sources:
+    - https://github.com/vabene1111/recipes
+    - https://hub.docker.com/r/vabene1111/recipes
+    urls:
+    - https://github.com/Aste88/charts/releases/download/recipes-6.4.0/recipes-6.4.0.tgz
+    version: 6.4.0
+  - annotations:
+      artifacthub.io/changes: |
         - kind: changed
           description: Upgraded `tandoor` to version `1.0.5.2` and `nginx` sidecar `1.21.6`.
     apiVersion: v2
@@ -71095,6 +72616,36 @@ entries:
     urls:
     - https://github.com/billimek/billimek-charts/releases/download/rtorrent-flood-4.0.0/rtorrent-flood-4.0.0.tgz
     version: 4.0.0
+  rtsp-to-web:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: "Upgrade RTSPtoWeb to v2.2.0"
+        - kind: changed
+          description: "**BREAKING** The config directory is now located at `/config/config.json`"
+    apiVersion: v2
+    appVersion: v2.2.0
+    created: "2022-04-21T00:13:01.005297024Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: RTSPtoWeb converts RTSP streams to WebRTC, LL-HLS, HLS, MSE
+    digest: 5f2d993b47d95379e006e02f9a50d0d4d327d49a8ac454ed355808fad2f7be28
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/rtsp-to-web
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/WebRTC_Logo.svg/440px-WebRTC_Logo.svg.png
+    keywords:
+    - rtsp-to-web
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: allen.porter@gmail.com
+      name: allenporter
+    name: rtsp-to-web
+    sources:
+    - https://github.com/deepch/RTSPtoWeb/
+    urls:
+    - https://github.com/Aste88/charts/releases/download/rtsp-to-web-2.0.0/rtsp-to-web-2.0.0.tgz
+    version: 2.0.0
   sabnzbd:
   - annotations:
       artifacthub.io/changes: |
@@ -72697,7 +74248,66 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/scrypted-0.1.0/scrypted-0.1.0.tgz
     version: 0.1.0
+  sdtd:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: main
+    created: "2022-04-21T00:13:01.747588918Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Dedicated server for 7 Days to Die
+    digest: c65665099dd986d345d66bba454e451afe005ef9ec11fead5092ae6a4195bb14
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/7d2d
+    icon: https://7daystodie.com/wp-content/uploads/2016/04/7dtd_site_icon.png
+    keywords:
+    - 7d2d
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: me@reitermark.us
+      name: reitermarkus
+    name: sdtd
+    sources:
+    - https://github.com/reitermarkus/7d2d
+    urls:
+    - https://github.com/Aste88/charts/releases/download/sdtd-0.1.0/sdtd-0.1.0.tgz
+    version: 0.1.0
   seafile:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+    apiVersion: v2
+    appVersion: 8.0.7
+    created: "2022-04-21T00:13:01.926956103Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: seafile helm package
+    digest: aff8e8e300fd133ab0032bce2795348d28ab26ba4a989533620e038b0373c6dc
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/seafile
+    icon: https://manual.seafile.com/media/seafile-transparent-1024.png
+    keywords:
+    - seafile
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: 1985132+phybros@users.noreply.github.com
+      name: phybros
+    name: seafile
+    sources:
+    - https://github.com/haiwen/seafile-docker
+    urls:
+    - https://github.com/Aste88/charts/releases/download/seafile-2.1.0/seafile-2.1.0.tgz
+    version: 2.1.0
   - annotations:
       artifacthub.io/changes: |
         - kind: fixed
@@ -74456,6 +76066,45 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: 2.7.1
+    created: "2022-04-21T00:13:02.634012929Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: A self-hosted and PHP-based URL shortener application with CLI and
+      REST interfaces
+    digest: a502e5fd113b985484bc2f4150f1e168184571fd0fc94becf09f7b2590c1a06d
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/shlink
+    icon: https://avatars.githubusercontent.com/u/20341790?s=200&v=4
+    keywords:
+    - shlink
+    - url-shortener
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: ncwilde43@gmail.com
+      name: nicholaswilde
+    name: shlink
+    sources:
+    - https://github.com/shlinkio/shlink
+    urls:
+    - https://github.com/Aste88/charts/releases/download/shlink-4.1.0/shlink-4.1.0.tgz
+    version: 4.1.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
         - kind: changed
           description: Upgraded `mariadb` chart dependency to version `10.2.0`.
@@ -75021,6 +76670,36 @@ entries:
     - https://github.com/shlinkio/shlink
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/shlink-1.0.0/shlink-1.0.0.tgz
+    version: 1.0.0
+  signal-cli-rest-api:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: "0.57"
+    created: "2022-04-21T00:13:02.800000554Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Dockerized Signal Messenger REST API
+    digest: 798d196c6c4b7d15aedcc2734b7d5318c054dd52af3e55dae9322fb90a5ab82d
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/signal-cli-rest-api
+    icon: https://signal-cli-rest-api.org/icon
+    keywords:
+    - signal-cli-rest-api
+    - signal-messenger
+    - signal
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - name: vargat
+      url: https://github.com/tamasv
+    name: signal-cli-rest-api
+    sources:
+    - https://github.com/bbernhard/signal-cli-rest-api
+    urls:
+    - https://github.com/Aste88/charts/releases/download/signal-cli-rest-api-1.0.0/signal-cli-rest-api-1.0.0.tgz
     version: 1.0.0
   sinusbot:
   - annotations:
@@ -75727,6 +77406,36 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/smarter-device-manager-1.0.0/smarter-device-manager-1.0.0.tgz
     version: 1.0.0
   sonarr:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Changed docker image version to the latest one.
+    apiVersion: v2
+    appVersion: v3.0.7.1477
+    created: "2022-04-21T00:13:03.332888001Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Smart PVR for newsgroup and bittorrent users
+    digest: c375a85e13b58c1faffd81dbefb5358c731353c9f26a2db5178193b5f5fb9684
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/sonarr
+    icon: https://github.com/Sonarr/Sonarr/blob/phantom-develop/Logo/512.png?raw=true
+    keywords:
+    - sonarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: sonarr
+    sources:
+    - https://github.com/Sonarr/Sonarr
+    - https://github.com/k8s-at-home/container-images
+    urls:
+    - https://github.com/Aste88/charts/releases/download/sonarr-16.1.0/sonarr-16.1.0.tgz
+    version: 16.1.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -78299,6 +80008,41 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: v0.90.74
+    created: "2022-04-21T00:13:03.842258371Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    description: Status page for monitoring your websites and applications
+    digest: a748b806e55bbc20b310f3a4f506a32e85f56d2ea0258f7f3b07e7835358a689
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/statping
+    icon: https://avatars.githubusercontent.com/u/61949049?s=200&v=4
+    keywords:
+    - statping
+    - status
+    - status-page
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: nick@cajun.pro
+      name: DirtyCajunRice
+    - email: git@angelnu.com
+      name: angelnu
+    name: statping
+    sources:
+    - https://github.com/statping/statping
+    urls:
+    - https://github.com/Aste88/charts/releases/download/statping-5.6.0/statping-5.6.0.tgz
+    version: 5.6.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
     apiVersion: v2
     appVersion: v0.90.74
@@ -79401,6 +81145,34 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/statping-1.0.0/statping-1.0.0.tgz
     version: 1.0.0
+  strongswan:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-04-21T00:13:04.008393293Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: strongSwan – the OpenSource IPsec-based VPN Solution
+    digest: d1e90e555a248e54f7aa5c5768703715047aefb270770f89056beb2c2ad418ad
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/strongswan
+    icon: https://strongswan.org/images/strongswan_neu.png
+    keywords:
+    - strongswan
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: me@reitermark.us
+      name: reitermarkus
+    name: strongswan
+    sources:
+    - https://github.com/reitermarkus/strongswan
+    urls:
+    - https://github.com/Aste88/charts/releases/download/strongswan-0.1.0/strongswan-0.1.0.tgz
+    version: 0.1.0
   syncthing:
   - annotations:
       artifacthub.io/changes: |
@@ -80975,6 +82747,39 @@ entries:
   tdarr:
   - annotations:
       artifacthub.io/changes: |
+        - kind: add
+          description: Explicitly Add PUID and PGID environment variables for server and node.
+    apiVersion: v2
+    appVersion: 2.00.10
+    created: "2022-04-21T00:13:04.503555817Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Tdarr is a self hosted web-app for automating media library transcode/remux
+      management and making sure your files are exactly how you need them to be in
+      terms of codecs/streams/containers etc.
+    digest: b8660d0f4d00fc01849702d23aacd60803c8a5df43a50fc12f4c3debaa16d375
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/tdarr
+    icon: https://s7.gifyu.com/images/GifCroppedTran.gif
+    keywords:
+    - transcoding
+    - remux
+    - media
+    - video
+    maintainers:
+    - email: k8s-at-home@xpander.eml.cc
+      name: auricom
+    name: tdarr
+    sources:
+    - https://www.github.com/HaveAGitGat/Tdarr
+    - https://hub.docker.com/r/haveagitgat/tdarr/
+    - https://tdarr.io/docs/
+    urls:
+    - https://github.com/Aste88/charts/releases/download/tdarr-4.4.0/tdarr-4.4.0.tgz
+    version: 4.4.0
+  - annotations:
+      artifacthub.io/changes: |
         - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
     apiVersion: v2
@@ -81632,6 +83437,41 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/teamspeak-0.1.0/teamspeak-0.1.0.tgz
     version: 0.1.0
   teedy:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: v1.10
+    created: "2022-04-21T00:13:04.827914643Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    description: Teedy is an open source, lightweight document management system for
+      individuals and businesses.
+    digest: 3f50fa37f5c8e259822b59be0df4eb2dd2d1020e8dfd0c9d77afb06106af1e9a
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/teedy
+    icon: https://raw.githubusercontent.com/sismics/docs/v1.9/docs-web/src/main/resources/image/logo.png
+    keywords:
+    - teedy
+    - documents
+    - management
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: ryan@ryanholt.net
+      name: carpenike
+    name: teedy
+    sources:
+    - https://github.com/sismics/docs
+    - https://github.com/k8s-at-home/charts/tree/master/charts/teedy
+    urls:
+    - https://github.com/Aste88/charts/releases/download/teedy-5.6.0/teedy-5.6.0.tgz
+    version: 5.6.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -82660,6 +84500,38 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/teedy-1.0.0/teedy-1.0.0.tgz
     version: 1.0.0
   teslamate:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: v1.23.4
+    created: "2022-04-21T00:13:05.007574379Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    description: "A self-hosted data logger for your Tesla \U0001F698"
+    digest: a85286cfc71725037671877d6c30315da1f182da29a42e90b5dc336f9da86242
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/teslamate
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tesla_Motors.svg/793px-Tesla_Motors.svg.png
+    keywords:
+    - teslamate
+    - tesla
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: teslamate
+    sources:
+    - https://github.com/adriankumpf/teslamate
+    - https://github.com/k8s-at-home/charts/tree/master/charts/stable/teslamate
+    urls:
+    - https://github.com/Aste88/charts/releases/download/teslamate-6.6.0/teslamate-6.6.0.tgz
+    version: 6.6.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -83954,6 +85826,35 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/thelounge-1.0.0/thelounge-1.0.0.tgz
     version: 1.0.0
+  theme-park:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial version
+    apiVersion: v2
+    appVersion: v1.7.3
+    created: "2022-04-21T00:13:05.321303479Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: theme-park helm package
+    digest: a57eb66b5ec73fc308909b79e773aebc2a949d858666b07e79d607a9f0d2e97d
+    home: https://github.com/GilbN/theme.park
+    icon: https://github.com/GilbN/theme.park/blob/master/resources/landing-page/assets/img/themepark-logo.png
+    keywords:
+    - theme-park
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: nat@natallan.com
+      name: Truxnell
+    name: theme-park
+    sources:
+    - https://github.com/GilbN/theme.park
+    - https://github.com/k8s-at-home/container-images/tree/main/apps/theme-park
+    urls:
+    - https://github.com/Aste88/charts/releases/download/theme-park-1.0.0/theme-park-1.0.0.tgz
+    version: 1.0.0
   torrserver:
   - annotations:
       artifacthub.io/changes: |
@@ -83984,6 +85885,39 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/torrserver-1.0.0/torrserver-1.0.0.tgz
     version: 1.0.0
   traccar:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+    apiVersion: v2
+    appVersion: v4.13
+    created: "2022-04-21T00:13:05.656032098Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: Traccar is an open source GPS tracking system.
+    digest: 8f2bd247dee53a2604a9d8978d974e1f8be7b9a9f17ed6befbddffe1b3b6c397
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/traccar
+    icon: https://github.com/traccar/traccar-web/raw/master/web/icon.png
+    keywords:
+    - traccar
+    - gps
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    name: traccar
+    sources:
+    - https://github.com/traccar/traccar
+    - https://hub.docker.com/r/traccar/traccar
+    urls:
+    - https://github.com/Aste88/charts/releases/download/traccar-7.1.0/traccar-7.1.0.tgz
+    version: 7.1.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -86085,6 +88019,38 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: v1.8723.0
+    created: "2022-04-21T00:13:06.314580533Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    description: Tiny Tiny RSS is a free and open source web-based news feed (RSS/Atom)
+      reader and aggregator
+    digest: f23f5edbb9f986d57200a7cc6911e2dd1fcf8dcec0bb751565e0830bf31680f6
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/tt-rss
+    icon: https://git.tt-rss.org/fox/tt-rss/raw/branch/master/images/favicon-72px.png
+    keywords:
+    - tt-rss
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: tt-rss
+    sources:
+    - https://git.tt-rss.org/fox/tt-rss
+    urls:
+    - https://github.com/Aste88/charts/releases/download/tt-rss-4.6.0/tt-rss-4.6.0.tgz
+    version: 4.6.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
     apiVersion: v2
     appVersion: v1.8723.0
@@ -87475,6 +89441,39 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/tvheadend-1.0.0/tvheadend-1.0.0.tgz
     version: 1.0.0
   unifi:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Updated Unifi version to version `v7.0.25`.
+    apiVersion: v2
+    appVersion: v7.0.25
+    created: "2022-04-21T00:13:06.653950467Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mongodb.enabled
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.31.5
+    description: Ubiquiti Network's Unifi Controller
+    digest: e942b0beaf2f62409dcdcae3785471b3b7a8485bb858752ea57fef1e6b118744
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/unifi
+    icon: https://prd-www-cdn.ubnt.com/static/favicon-152.png
+    keywords:
+    - ubiquiti
+    - unifi
+    maintainers:
+    - email: jeff@billimek.com
+      name: billimek
+    - email: mike@quadra-tec.net
+      name: mcronce
+    name: unifi
+    sources:
+    - https://github.com/jacobalberty/unifi-docker
+    urls:
+    - https://github.com/Aste88/charts/releases/download/unifi-4.8.0/unifi-4.8.0.tgz
+    version: 4.8.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -90092,6 +92091,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Update appVersion to 1.14.1
+    apiVersion: v2
+    appVersion: 1.14.1
+    created: "2022-04-21T00:13:07.120656188Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: 08d84cf7593ab03cd6299ca1915f6650f25f5a16d7a604db69dd1801160a267a
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/incubator/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: pysen@svartavillan.se
+      name: pysen
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    urls:
+    - https://github.com/Aste88/charts/releases/download/uptime-kuma-1.2.2/uptime-kuma-1.2.2.tgz
+    version: 1.2.2
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded `common` chart dependency to version `4.3.0`.
     apiVersion: v2
     appVersion: v1.11.1
@@ -91126,6 +93155,44 @@ entries:
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: 1.24.0
+    created: "2022-04-21T00:13:07.777070562Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    description: Vaultwarden is a Bitwarden compatable server in Rust
+    digest: ca5d6924f54fdab9a734eaa1a2a687fa6ad23ec3cb12d731c7c50bf09b4dbe84
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/vaultwarden
+    icon: https://sesoodan.sirv.com/bitwarden_rs.png
+    keywords:
+    - Vaultwarden
+    - bitwardenrs
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: rwalt@pm.me
+      name: Rwaltr
+    name: vaultwarden
+    sources:
+    - https://github.com/dani-garcia/vaultwarden
+    urls:
+    - https://github.com/Aste88/charts/releases/download/vaultwarden-4.1.0/vaultwarden-4.1.0.tgz
+    version: 4.1.0
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
           description: Upgraded app to version `1.24.0` from `1.22.2`.
     apiVersion: v2
     appVersion: 1.24.0
@@ -91808,6 +93875,44 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/vaultwarden-1.0.0/vaultwarden-1.0.0.tgz
     version: 1.0.0
   vikunja:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+    apiVersion: v2
+    appVersion: 0.17.0
+    created: "2022-04-21T00:13:08.007490575Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    description: The to-do app to organize your life
+    digest: 1aa740bf5f81b2cd5c9e444ea2b32c27144f3fe94f1510e0ca730fbedf8bb715
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/vikunja
+    icon: https://s7.gifyu.com/images/GifCroppedTran.gif
+    keywords:
+    - vikunja
+    - to-do
+    - tasks
+    - calendar
+    - kanban
+    maintainers:
+    - email: k8s-at-home@xpander.eml.cc
+      name: auricom
+    name: vikunja
+    sources:
+    - https://kolaente.dev/vikunja/api
+    - https://kolaente.dev/vikunja/frontend
+    - https://hub.docker.com/r/vikunja/api
+    - https://hub.docker.com/r/vikunja/frontend
+    - https://vikunja.io/docs/
+    urls:
+    - https://github.com/Aste88/charts/releases/download/vikunja-5.4.0/vikunja-5.4.0.tgz
+    version: 5.4.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -92521,6 +94626,50 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/vikunja-1.0.0/vikunja-1.0.0.tgz
     version: 1.0.0
   wallabag:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version `10.16.2`.
+        - kind: changed
+          description: Upgraded `redis` chart dependency to version `15.7.6`.
+    apiVersion: v2
+    appVersion: 2.4.2
+    created: "2022-04-21T00:13:08.207724037Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.7.6
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.16.2
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: A self hostable application for saving web pages, freely.
+    digest: c2b32717c6fb416c6f6b1b0785bbe83bef1725c06617ffc1557e031b68c77926
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/wallabag
+    icon: https://raw.githubusercontent.com/wallabag/logo/master/app-android/logo-app-android-icon-bg-white-512.png
+    keywords:
+    - wallabag
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - name: Patricol
+      url: https://patricol.co/
+    name: wallabag
+    sources:
+    - https://github.com/wallabag/docker
+    - https://hub.docker.com/wallabag/wallabag
+    urls:
+    - https://github.com/Aste88/charts/releases/download/wallabag-6.1.0/wallabag-6.1.0.tgz
+    version: 6.1.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -93408,7 +95557,72 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/wallabag-1.0.0/wallabag-1.0.0.tgz
     version: 1.0.0
+  warrior:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: added
+          description: Initial chart version.
+    apiVersion: v2
+    appVersion: latest
+    created: "2022-04-21T00:13:08.365433172Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: The Archive Team Warrior is a virtual archiving appliance. You can
+      run it to help with the Archive Team archiving efforts. It will download sites
+      and upload them to our archive—and it’s really easy to do!
+    digest: 9f8bb5176dc4c478efe260fad58ad51bd366d8040c73725d9459668049105e85
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/incubator/warrior
+    icon: https://camo.githubusercontent.com/782d076bd3542f1e91abe60274e7fac9f63f586f8f6a27a13e16425fb8fd4608/68747470733a2f2f7777772e617263686976657465616d2e6f72672f696d616765732f662f66332f417263686976655f7465616d2e706e67
+    keywords:
+    - warrior
+    - archiveteam
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: sander@red9.nl
+      name: stimmerman
+    name: warrior
+    sources:
+    - https://wiki.archiveteam.org/index.php/ArchiveTeam_Warrior
+    - https://github.com/ArchiveTeam/warrior-dockerfile
+    urls:
+    - https://github.com/Aste88/charts/releases/download/warrior-1.0.0/warrior-1.0.0.tgz
+    version: 1.0.0
   webtrees:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version `10.4.4`.
+    apiVersion: v2
+    appVersion: 2.0.19
+    created: "2022-04-21T00:13:08.541314877Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.4.4
+    description: Open-source online collaborative genealogy application
+    digest: ca3615173e97d63f290292199c5366de91c9e54ee3586d106eb7c9601d913fa0
+    icon: https://raw.githubusercontent.com/fisharebest/webtrees/main/resources/img/webtrees-icon.png
+    keywords:
+    - webtrees
+    - genealogy
+    - family-tree
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: rogerrum@gmail.com
+      name: rogerrum
+    name: webtrees
+    sources:
+    - https://github.com/fisharebest/webtrees
+    - https://github.com/NathanVaughn/webtrees-docker
+    urls:
+    - https://github.com/Aste88/charts/releases/download/webtrees-1.2.0/webtrees-1.2.0.tgz
+    version: 1.2.0
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -93763,6 +95977,36 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/whoogle-1.0.0/whoogle-1.0.0.tgz
     version: 1.0.0
   wikijs:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: Removed the forced env {} so they can be populated elsewhere (envFrom secrets for example)
+    apiVersion: v2
+    appVersion: version-2.5.201
+    created: "2022-04-21T00:13:08.877593667Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Make documentation a joy to write using Wiki.js's beautiful and intuitive
+      interface!
+    digest: 04c82fa01685a9de9d94b0819fabb1ed6e999e55c5abaece8cb8c45f34ae0307
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/wikijs
+    icon: https://static.requarks.io/logo/wikijs-butterfly.svg
+    keywords:
+    - wiki
+    - wikijs
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: rolf@berkenbosch.nl
+      name: rolfberkenbosch
+    name: wikijs
+    sources:
+    - https://hub.docker.com/r/linuxserver/wikijs/
+    - https://github.com/Requarks/wiki
+    urls:
+    - https://github.com/Aste88/charts/releases/download/wikijs-6.2.1/wikijs-6.2.1.tgz
+    version: 6.2.1
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -96420,6 +98664,35 @@ entries:
     - https://github.com/k8s-at-home/charts/releases/download/youtubedl-material-1.0.0/youtubedl-material-1.0.0.tgz
     version: 1.0.0
   zalando-postgres-cluster:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: documented that operator has to be installed before this chart.
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-04-21T00:13:09.993144599Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.3.0
+    description: Creates a postgres cluster using the Zalando Postgres operator and
+      local storage
+    digest: 0f72a035a654f21ae69a66e4114f5e46b7d22938406f8190d06abb8035825f47
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/zalando-postgres-cluster
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png
+    keywords:
+    - postgres
+    - operator
+    - zalando
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: zalando-postgres-cluster
+    sources:
+    - https://github.com/zalando/postgres-operator
+    urls:
+    - https://github.com/Aste88/charts/releases/download/zalando-postgres-cluster-3.2.1/zalando-postgres-cluster-3.2.1.tgz
+    version: 3.2.1
   - annotations:
       artifacthub.io/changes: |
         - kind: changed
@@ -99490,4 +101763,4 @@ entries:
     urls:
     - https://github.com/k8s-at-home/charts/releases/download/zwavejs2mqtt-1.0.0/zwavejs2mqtt-1.0.0.tgz
     version: 1.0.0
-generated: "2022-02-17T08:58:12.612722986Z"
+generated: "2022-04-21T00:13:10.320994743Z"
